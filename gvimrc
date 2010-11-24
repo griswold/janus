@@ -21,9 +21,6 @@ endif
 " Start without the toolbar
 set guioptions-=T
 
-" Default gui color scheme
-color molokai
-
 " ConqueTerm wrapper
 function StartTerm()
   execute 'ConqueTerm ' . $SHELL . ' --login'
@@ -31,7 +28,6 @@ function StartTerm()
 endfunction
 
 " Project Tree
-autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
 

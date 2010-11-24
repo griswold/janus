@@ -24,6 +24,9 @@ set wildignore+=*.o,*.obj,.git,*.rbc
 " Status bar
 set laststatus=2
 
+" Space as leader
+let mapleader=" "
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
@@ -35,7 +38,7 @@ let g:CommandTMaxHeight=20
 map <Leader>z :ZoomWin<CR>
 
 " CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+map <Leader>ct :!ctags --extra=+f -R *<CR><CR>
 
 " Remember last location in file
 if has("autocmd")
@@ -97,9 +100,23 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color desert
+color jellybeans
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" get rid of scrollbars
+set guioptions=aAce
+
+" default font
+set guifont=Monaco:h14
+
+" run current script in test client
+map <Leader>r :!/Users/jgriswold/code/ventana/app/script/test_client %:p<CR>
+
+" Use Control-n and Control-p to navigate between next and previous buffer
+nnoremap <silent> <C-n> :bnext<CR>
+nnoremap <silent> <C-p> :bprevious<CR>
+
