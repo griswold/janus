@@ -120,3 +120,5 @@ map <Leader>r :!/Users/jgriswold/code/ventana/app/script/test_client %:p<CR>
 nnoremap <silent> <C-n> :bnext<CR>
 nnoremap <silent> <C-p> :bprevious<CR>
 
+" Dont ctags in autocomplete
+set complete-=t
