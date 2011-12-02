@@ -128,7 +128,7 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color jellybeans
+color desert
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -155,19 +155,3 @@ endif
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
-
-" get rid of scrollbars
-set guioptions=aAce
-
-" default font
-set guifont=Monaco:h14
-
-" run current script in test client
-map <Leader>r :!/Users/jgriswold/code/ventana/app/script/test_client %:p<CR>
-
-" Use Control-n and Control-p to navigate between next and previous buffer
-nnoremap <silent> <C-n> :bnext<CR>
-nnoremap <silent> <C-p> :bprevious<CR>
-
-" Dont ctags in autocomplete
-set complete-=t
