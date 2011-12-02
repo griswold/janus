@@ -9,8 +9,11 @@ plugin
 ruby
 snippets
 syntax
+syntax_checkers
 ftdetect
 ftplugin
 colors
 indent
 .VimballRecord
+backup
+compiler
